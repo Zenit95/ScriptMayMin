@@ -16,7 +16,7 @@ for i in $(ls)
 do
 	if [ -f "$i" ]
 	then
-		newName=$(echo tr '[A-Z]' '[a-z]')
+		newName=$(echo $i| tr '[:upper:]' '[:lower:]')
 		echo $newName
 		mv $i $newName
 	fi
